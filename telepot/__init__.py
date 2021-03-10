@@ -39,6 +39,8 @@ def flavor(msg):
     """
     if 'message_id' in msg:
         return 'chat'
+    elif 'my_chat_member' in msg:
+        return 'my_chat_member'
     elif 'id' in msg and 'chat_instance' in msg:
         return 'callback_query'
     elif 'id' in msg and 'query' in msg:
