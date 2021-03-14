@@ -108,7 +108,11 @@ def _extract_message(update):
                                    'inline_query',
                                    'chosen_inline_result',
                                    'shipping_query',
-                                   'pre_checkout_query'])
+                                   'pre_checkout_query',
+                                   'chat_member',
+                                   'my_chat_member'])
+    if not key:
+        return key, update
     return key, update[key]
 
 def _infer_handler_function(bot, h):
